@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/energy/energy_insert}" th:object ="${luz}" method="post">
+  <input type="hidden" th:field="*{id}">
+  <label >
+    casa
+  </label>
+  <input th:field="*{casa}" type="text">
+  <br>
+  <label >
+    piso
+  </label>
+  <input th:field="*{piso}" type="text">
+  <br>
+  <label >
+      kwats
+  </label>
+  <input th:field="*{kwats}" type="text">
+  <br>
+  <label >
+    importe
+  </label>
+  <input th:field="*{importe}" type="text">
+  <br>
+  <label>
+    startDate
+  </label>
+  <input th:field="*{startDate}"  type="date">
+  <br>
+  <label>
+    endDate
+  </label>
+  <input th:field="*{endDate}"  type="date">
+  <br>
+  <button type="submit">
+    add
+  </button>
+
+</form>
+
+</body>
+</html>

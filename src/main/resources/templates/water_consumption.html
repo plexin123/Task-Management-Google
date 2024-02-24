@@ -1,0 +1,46 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h1 > CONSUMPTION TABLE </h1>
+<a th:href="@{water/new_register}">
+  NEW REGISTER
+</a>
+<table>
+  <thead>
+  <tr >
+    <th>id</th>
+    <th>casa</th>
+    <th>piso</th>
+    <th>metroCubico</th>
+    <th>importe</th>
+    <th colspan="2">Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="x:${water}">
+    <td th:text="${x.id}"></td>
+    <td th:text="${x.casa}"></td>
+    <td th:text="${x.piso}"></td>
+    <td th:text="${x.metroCubico}"></td>
+    <td th:text="${x.importe}"></td>
+    <td><a href="#" class="btn btn-warning" >
+      Editar
+    </a>
+    </td>
+    <td><a href="#" class="btn btn-danger"   >
+      Eliminar
+    </a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

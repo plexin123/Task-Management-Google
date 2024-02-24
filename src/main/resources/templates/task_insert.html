@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/tasks/task_insert}" th:object ="${tasks}" method="post">
+  <label >
+    casa
+  </label>
+  <input th:field="*{title}" type="text">
+  <br>
+  <label >
+    title
+  </label>
+  <input th:field="*{description}" type="text">
+  <br>
+  <label >
+    description
+  </label>
+  <input th:field="*{dueDate}" type="text">
+  <br>
+  <label >
+    dueDate
+  </label>
+  <input th:field="*{completed}" type="text">
+  <br>
+  <label>
+    completed
+  </label>
+    <input  th:field="*{dependencies}" type= "text">
+  <br>
+  <label>
+    dependencies
+  </label>
+  <br>
+  <button type="submit">
+    add
+  </button>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/water/water_insert}" th:object ="${agua}" method="post">
+  <label >
+    casa
+  </label>
+  <input th:field="*{casa}" type="text">
+  <br>
+  <label >
+    piso
+  </label>
+  <input th:field="*{piso}" type="text">
+  <br>
+  <label >
+    kwats
+  </label>
+  <input th:field="*{metroCubico}" type="text">
+  <br>
+  <label >
+    importe
+  </label>
+  <input th:field="*{importe}" type="text">
+  <br>
+  <button type="submit">
+    add
+  </button>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 > CONSUMPTION TABLE </h1>
+<a th:href="@{energy/new_register}">
+    NEW REGISTER
+</a>
+<table>
+    <thead>
+    <tr >
+        <th>id</th>
+        <th>casa</th>
+        <th>piso</th>
+        <th>kwats</th>
+        <th>importe</th>
+        <th>startDate</th>
+        <th>endDate</th>
+        <th colspan="2">Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="x:${energy}">
+        <td th:text="${x.id}"></td>
+        <td th:text="${x.casa}"></td>
+        <td th:text="${x.piso}"></td>
+        <td th:text="${x.kwats}"></td>
+        <td th:text="${x.importe}"></td>
+        <td th:text="${x.startDate}"></td>
+        <td th:text="${x.endDate}"></td>
+        <td><a th:href="@{/energy/edit_register/{id} (id=${x.id})}" class="btn btn-warning" >
+            Editar
+        </a>
+        </td>
+        <td><a th:href="@{/energy/delete (id=${x.id})}" class="btn btn-danger" onclick="return confirm('Are you sure want to delete it')"  >
+            Eliminar
+        </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
